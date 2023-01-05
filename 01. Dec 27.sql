@@ -19,6 +19,8 @@ use SkillMine
 		eSalary numeric(8,2)
 	)
 
+
+
 	-- Uses of Alter
 
 		-- 1. to modify datatype or its size
@@ -37,6 +39,7 @@ use SkillMine
 		sp_help Employee
 
 
+		drop table Employee
 
 
 
@@ -49,34 +52,36 @@ use SkillMine
 
 
 -- Dept table
-create table Dept(
-deptid int primary key,
-deptname varchar(10)
-)
-sp_help Dept
+		create table Dept(
+		deptid int primary key,
+		deptname varchar(10)
+		)
+		sp_help Dept
 
 
 -- Emp table
-create table Emp(
-empid int primary key,
-empname varchar(20) not null,
-email varchar(40) unique,
-age int check (age>18),
-country varchar(20) default 'India',
-deptid int foreign key references Dept(deptid)
-)
-sp_help Emp
+		create table Emp(
+		empid int primary key,
+		empname varchar(20) not null,
+		email varchar(40) unique,
+		age int check (age>18),
+		country varchar(20) default 'India',
+		deptid int foreign key references Dept(deptid)
+		)
+		sp_help Emp
 
------------------------------------------------
+--------------------------------------------------------------------------
 
-create table Person(
-personid int,
-name varchar(20)
-)
-alter table person alter column personid int not null
-alter table person add constraint pk_person primary key (personid)
+--person table
+		create table Person(
+		personid int,
+		name varchar(20)
+		)
 
-alter table person drop constraint pk_person
+		alter table person alter column personid int not null
+		alter table person add constraint pk_person primary key (personid)
+
+		alter table person drop constraint pk_person
 
 
 -----------------------------------------------
