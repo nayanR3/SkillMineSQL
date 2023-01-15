@@ -11,6 +11,7 @@ use SkillMine
 		sAddress varchar(30)
 	)
 
+
 	--Create Employee table
 	create table Employee (
 		eID int,
@@ -26,6 +27,7 @@ use SkillMine
 		-- 1. to modify datatype or its size
 		alter table Employee alter column eName varchar(30)
 
+
 		-- 2. rename the column in sql server
 		sp_rename 'Employee.eAddress' , 'eAdd'
 
@@ -33,20 +35,12 @@ use SkillMine
 		-- 3. drop the column in the table
 		alter table Employee drop column eAdd
 
+
 		-- 4. add new column in the table
 		alter table Employee add eAdd varchar(20)
 
 		sp_help Employee
-
-
 		drop table Employee
-
-
-
-
-
-
-
 
 ---------------------------------------------------------------------------
 
@@ -72,6 +66,7 @@ use SkillMine
 
 --------------------------------------------------------------------------
 
+
 --person table
 		create table Person(
 		personid int,
@@ -83,8 +78,8 @@ use SkillMine
 
 		alter table person drop constraint pk_person
 
+--------------------------------------------------------------------------
 
------------------------------------------------
 
 create table Dept1(
 deptid int primary key,
@@ -102,7 +97,7 @@ deptid int foreign key references Dept(deptid)
 )
 sp_help Emp1
 
--- or
+			-- or
 
 create table Emp2(
 empid int primary key,
@@ -114,16 +109,20 @@ deptid int,
 constraint fk_empdept foreign key (deptid) references dept(deptid)
 )
 sp_help Emp2
------------------------------------------------
+
+--------------------------------------------------------------------------
+
 
 -- apply FK constraint on emp table for deptid col
 
 alter table emp add constraint fk_empdept foreign key (deptid) references dept(deptid)
 
+
+
 -- remove FK constraint
 alter table emp drop constraint fk_empdept
 
------------------------------------------------
+--------------------------------------------------------------------------
 
 
 
@@ -140,3 +139,7 @@ age int check (age>18),
 country varchar(20) default 'India'
 )
 sp_help Customer
+
+
+
+--------------------------------------------------------------------------
