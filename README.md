@@ -12,3 +12,4 @@
 | **`08`** | [**Day 8**](https://github.com/nayanR3/SkillMineSQL/blob/master/files/08.%20Jan%2010.sql) |
 | **`09`** | [**sql Test 1**](https://github.com/nayanR3/SkillMineSQL/blob/master/files/SQL%20Test%201.sql) |
 | **`10`** | [**sql Test 2**](https://github.com/nayanR3/SkillMineSQL/blob/master/files/SQL%20Test%202.sql) |
+| **`10`** | [**Trigger**](https://github.com/nayanR3/SkillMineSQL/blob/master/files/09.%20Jan%2017.sql) |
